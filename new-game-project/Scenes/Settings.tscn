@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://do4cbwg5l30bp"]
+
+[ext_resource type="Texture2D" uid="uid://dhpnikdfc31qs" path="res://Images/PLACE HOLDER DELETE BEFORE RELEASE/Untitled.svg" id="1_hivdp"]
+[ext_resource type="Script" path="res://Scripts/Menu Button Scripts/Back.gd" id="2_eum5i"]
+
+[node name="Settings" type="Node2D"]
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="BG"]
+z_index = -1
+position = Vector2(576, 320)
+scale = Vector2(9, 5.0625)
+texture = ExtResource("1_hivdp")
+metadata/_edit_lock_ = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 456.0
+offset_top = 304.0
+offset_right = 696.0
+offset_bottom = 384.0
+text = "THIS IS THE SETTINGS TAB"
+editable = false
+selecting_enabled = false
+scroll_smooth = true
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_eum5i")
+
+[node name="Button" type="Button" parent="Node2D"]
+offset_left = 272.0
+offset_top = 336.0
+offset_right = 322.0
+offset_bottom = 367.0
+text = "BACK"
+
+[connection signal="pressed" from="Node2D/Button" to="Node2D" method="_on_button_pressed"]
